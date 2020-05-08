@@ -331,7 +331,7 @@ b = tf.math.argmax(input = predictions.transpose())
 predictions = tf.keras.backend.eval(b)
 print("Size of test images is")
 print(len(predictions))
-print (predictions)
+
 
 true_label = tf.math.argmax(input =(y_test*1).transpose())
 cnf_matrix = confusion_matrix(true_label, predictions)
@@ -344,7 +344,6 @@ plt.show()
 
 
 export_dir = os.path.join(cwd_dir, 'saved_model\\')
-# model.save(os.path.join(export_dir, 'saved_model.pb'))
 tf.saved_model.save(model,os.path.join(cwd_dir, 'saved_model.h5') )
 
 #conversion to tensorflow lite
