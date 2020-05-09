@@ -105,23 +105,18 @@ CLASS_NAMES = ['depressed', 'happy' ,'neutral']
 print ("the classes are", CLASS_NAMES)
 cpt=0
 
-
-# sample_test_dir = os.path.join(cwd_dir, 'testSample')
 sample_test_lib = pathlib.Path(import_dir)
 print(sample_test_lib)
 list_ds= tf.data.Dataset.list_files(str(sample_test_lib/'*'))
 labeled_ds = list_ds.map(process_path, num_parallel_calls=100)
-# sample_test = list_ds
 test_dataset = labeled_ds.skip(10)
 test_dataset = test_dataset.take(20)
 test_data_gen = prepare_for_training(test_dataset) 
-# test_sample = prepare_for_training(list_ds)
 batch_size=50
 tests_batch,_ = next(iter(test_data_gen))
 predictor=tests_batch
 predictions = model.predict(predictor)
 print(predictions)
-# b = my_argmax(predictions.transpose())
 b = tf.math.argmax(input = predictions.transpose())
 c = tf.keras.backend.eval(b)
 print(c)
