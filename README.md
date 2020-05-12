@@ -23,6 +23,6 @@ Use Depression_analyzer.py'
 6. Saved model is given in the saved_model folder
 7. In order to check the response of the augmented dataset run 'augmented_depression_analyzer.py'
 
-
-
-
+### Steps for running on an Embedded environment
+1. Use the tflite file to deploy this model on an Embedded environment eg. Raspberry pi
+2. Intsall Tflite interpreter from tensorflow documentation which is provided here "https://www.tensorflow.org/lite/guide/python"
