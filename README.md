@@ -13,13 +13,13 @@ Dataset which is used to train the model is from kaggle.
 	sklearn 0.22.2.post1
 	pandas - '1.0.3'
 ```
-### Steps to run Visual sentiment Analysis:
+### Steps to run Depression Analyzer:
 Use Depression_analyzer.py'
 1. Install all the above libraries mentioned.
 2. Import 'os' to get the current working directory for your project
 3. Add the notepad++ file of 'depression Analyzer.py' in the current working directory.
-4. It has all the required things to run the code.
-5. Dataset is also in the folder with the name'dataset'.
+4. It has all the required libraries and dataframes to run the code.
+5. Dataset downloaded from Kaggle is also in the folder 'dataset'.
 6. Saved model is given in the saved_model folder
 7. In order to check the response of the augmented dataset run 'augmented_depression_analyzer.py'
 
